@@ -1,0 +1,12 @@
+[user]
+	name = Philippe Henin
+	email = philippehenin@gmail.com
+
+[core]
+	editor = vim
+
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
