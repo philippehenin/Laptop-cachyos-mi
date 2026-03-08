@@ -4,9 +4,27 @@
 
 [core]
 	editor = vim
+	fsmonitor = true
+	untrackedCache = true
+	pager = delta
+	compression = -1
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+	light = false
+	side-by-side = true
 
 [alias]
 	st = status
 	co = checkout
 	br = branch
 	ci = commit
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential

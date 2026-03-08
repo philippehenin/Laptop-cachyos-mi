@@ -41,4 +41,44 @@ for file in "$CONFIG_DIR"/*; do
     link_file "$file" "$target"
 done
 
+# Applications directory
+APP_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/applications"
+APP_TARGET_DIR="$HOME/.local/share/applications"
+
+# Ensure application directory exists
+if [ -d "$APP_DIR" ]; then
+    echo "Setting up application shortcuts..."
+    mkdir -p "$APP_TARGET_DIR"
+    
+    # Iterate over files in applications directory
+    for file in "$APP_DIR"/*.desktop; do
+        [ -e "$file" ] || continue
+        filename=$(basename "$file")
+        target="$APP_TARGET_DIR/$filename"
+        
+        link_file "$file" "$target"
+    done
+fi
+
+# Cursor theme installation
+CURSOR_THEME="GoogleDot-Blue"
+CURSOR_URL="https://github.com/ful1e5/Google_Cursor/releases/download/v2.0.0/GoogleDot-Blue.tar.gz"
+ICONS_DIR="$HOME/.icons"
+
+if [ ! -d "$ICONS_DIR/$CURSOR_THEME" ]; then
+    echo "Installing $CURSOR_THEME cursor theme..."
+    mkdir -p "$ICONS_DIR"
+    curl -L "$CURSOR_URL" -o "/tmp/$CURSOR_THEME.tar.gz"
+    tar -xzf "/tmp/$CURSOR_THEME.tar.gz" -C "$ICONS_DIR"
+    rm "/tmp/$CURSOR_THEME.tar.gz"
+    
+    # Set the theme if on GNOME
+    if command -v gsettings >/dev/null; then
+        echo "Setting cursor theme to $CURSOR_THEME..."
+        gsettings set org.gnome.desktop.interface cursor-theme "$CURSOR_THEME"
+    fi
+else
+    echo "  [SKIP] $CURSOR_THEME cursor theme is already installed."
+fi
+
 echo "Configuration setup complete."
