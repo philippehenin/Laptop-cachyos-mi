@@ -61,3 +61,20 @@ nsearch() {
   fi
 }
 
+# Developer aliases
+alias v="nvim"
+alias vi="nvim"
+alias vim="nvim"
+alias g="git"
+alias gs="git status"
+alias gd="git diff"
+alias gl="git log --oneline -n 10"
+alias gp="git push"
+alias lla="ls -lA --color=auto"
+alias ll="ls -l --color=auto"
+alias l="ls -CF --color=auto"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -iv"
+
+

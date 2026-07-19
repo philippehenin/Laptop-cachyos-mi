@@ -43,6 +43,10 @@ For instructions on committing modifications, pushing updates to GitHub, and man
     - Enabled the `plugins` folder import in `lazy.lua` so additional tools (Leap, Outline, Prettier, Eslint, Aerial) load correctly.
     - Disabled `luarocks` in lazy.nvim options, and disabled unused Perl, Ruby, and Node.js provider checks in `options.lua`.
 *   **Dynamic Configurations**: Generalised the Waybar configuration files to use shell-expanded tilde (`~`) paths instead of hardcoded absolute user home directory paths. Updated `gpu.sh` to automatically detect and query AMD, Nvidia, and Intel GPUs dynamically, keeping the repository generic and preventing breakages across different laptops.
+*   **Developer Shell Aliases**: Appended convenient git, file system, and Neovim editor alias commands (e.g. `v`, `gs`, `lla`) to both `.bashrc` and `.zshrc`.
+*   **Automatic Power Monitoring**: Integrated the transition-only `power_monitor.sh` background daemon into Hyprland autostart to automatically toggle power profiles based on charger connection.
+*   **Catppuccin Mocha Notification Styling**: Styled Mako notifications to use Catppuccin Mocha base, text, and border colors.
+*   **Neovim comfort keybindings**: Configured essential comfort mappings (`jk`/`jj` escape, visual indentation, page centering) in Neovim's `keymaps.lua`.
 
 ### 2026-07-19
 *   **System Update**: Completed a full system package upgrade via `pacman` (with `--overwrite` flags resolving local `npm` module conflicts).
