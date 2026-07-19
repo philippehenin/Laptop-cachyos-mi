@@ -76,5 +76,14 @@ alias l="ls -CF --color=auto"
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -iv"
+
+# Interactive systemd journal error explorer
+jerrors() {
+  journalctl -p 3 -xb --no-pager | fzf --tac --no-sort \
+    --ansi \
+    --prompt "Systemd Errors > " \
+    --header "Boot Errors (priority 3/err or higher) | Ctrl-R to reload" \
+    --bind "ctrl-r:reload(journalctl -p 3 -xb --no-pager)"
+}
 # Zoxide smart directory jumper
 eval "$(zoxide init bash)"
