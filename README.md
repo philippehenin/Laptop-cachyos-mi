@@ -37,6 +37,11 @@ For instructions on committing modifications, pushing updates to GitHub, and man
 *   **GPU Monitoring**: Rewrote the Waybar GPU monitoring script (`gpu.sh`) to support AMD Radeon Vega (Renoir) integrated graphics instead of the old Intel/Nvidia template.
 *   **Power Management**: Rewrote the Waybar power profile script (`power_profile.py`) to control CPU governors via `cpupower` directly (since the Ryzen CPU lacks CPPC BIOS support, meaning `power-profiles-daemon` could not support the `performance` governor). Disabled the conflicting `power-profiles-daemon.service`.
 *   **Silent Power Mode**: Added a new custom `silent` profile to `power_profile.py` that disables CPU boost and caps core frequencies at 1.4GHz, keeping the laptop extremely quiet and preventing fan spin-up under light tasks.
+*   **Neovim / LazyVim Health Check**: Fixed checkhealth errors and warnings:
+    - Installed `lazygit`, `tree-sitter-cli`, and `python-pynvim` via pacman.
+    - Corrected Mason's invalid `dockerls` package name to `dockerfile-language-server` in `lazy.lua` and `full_tools.lua`.
+    - Enabled the `plugins` folder import in `lazy.lua` so additional tools (Leap, Outline, Prettier, Eslint, Aerial) load correctly.
+    - Disabled `luarocks` in lazy.nvim options, and disabled unused Perl, Ruby, and Node.js provider checks in `options.lua`.
 
 ### 2026-07-19
 *   **System Update**: Completed a full system package upgrade via `pacman` (with `--overwrite` flags resolving local `npm` module conflicts).
