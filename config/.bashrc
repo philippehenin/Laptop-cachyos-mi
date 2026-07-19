@@ -30,7 +30,7 @@ export EDITOR=nvim
 
 
 # Added by Antigravity CLI installer
-export PATH="/home/phe/.local/bin:$PATH"
+export PATH="/home/philippehenin/.local/bin:$PATH"
 
 # FZF optimization (using fd-find and ripgrep)
 export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'

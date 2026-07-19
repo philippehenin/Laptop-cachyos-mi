@@ -32,6 +32,9 @@ For instructions on committing modifications, pushing updates to GitHub, and man
 
 ## Updates & History
 
+### 2026-07-20
+*   **Path Correction**: Fixed the environment path installation for the `agy` CLI in `.bashrc` and `.zshrc` to point to `/home/philippehenin/.local/bin` instead of the incorrect `/home/phe/.local/bin`.
+
 ### 2026-07-19
 *   **System Update**: Completed a full system package upgrade via `pacman` (with `--overwrite` flags resolving local `npm` module conflicts).
 *   **Bluetooth Integration**: Installed `blueman` and added support for launching `blueman-manager` directly on click from the Waybar bluetooth module.
