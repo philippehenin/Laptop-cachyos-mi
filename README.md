@@ -50,7 +50,7 @@ For instructions on committing modifications, pushing updates to GitHub, and man
 *   **Zoxide Smart Directory Jumper**: Installed `zoxide` and initialized it in both `.bashrc` and `.zshrc` for faster directory navigation.
 *   **Zsh History Substring Search Keybindings**: Bound Up/Down arrow keys and vi-mode keys (`k`/`j`) to `zsh-history-substring-search` for intuitive historical command auto-completion.
 *   **Interactive Systemd Error Search (`jerrors`)**: Added a convenient `jerrors` function to `.bashrc` and `.zshrc` to browse and fuzzy-find systemd boot errors via `fzf` in real time.
-*   **RPN Calculator Integration**: Installed the HP-42S simulation package `free42` and added a custom application launcher shortcut `free42.desktop` to the configuration list.
+*   **RPN Calculator Integration**: Installed the HP-42S simulation package `free42` and terminal-based RPN calculator `orpie`, adding custom application menu shortcuts (`free42.desktop` and `orpie.desktop`) to the configuration list.
 
 ### 2026-07-19
 *   **System Update**: Completed a full system package upgrade via `pacman` (with `--overwrite` flags resolving local `npm` module conflicts).

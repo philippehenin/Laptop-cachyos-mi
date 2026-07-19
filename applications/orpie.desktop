@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Orpie (RPN Terminal Calculator)
+Comment=Curses-based RPN Calculator
+Exec=orpie
+Icon=calc
+Terminal=true
+Type=Application
+Categories=Utility;Calculator;
