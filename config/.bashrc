@@ -76,5 +76,5 @@ alias l="ls -CF --color=auto"
 alias cp="cp -iv"
 alias mv="mv -iv"
 alias rm="rm -iv"
-
-
+# Zoxide smart directory jumper
+eval "$(zoxide init bash)"

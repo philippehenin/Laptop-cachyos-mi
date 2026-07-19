@@ -47,6 +47,7 @@ For instructions on committing modifications, pushing updates to GitHub, and man
 *   **Automatic Power Monitoring**: Integrated the transition-only `power_monitor.sh` background daemon into Hyprland autostart to automatically toggle power profiles based on charger connection.
 *   **Catppuccin Mocha Notification Styling**: Styled Mako notifications to use Catppuccin Mocha base, text, and border colors.
 *   **Neovim comfort keybindings**: Configured essential comfort mappings (`jk`/`jj` escape, visual indentation, page centering) in Neovim's `keymaps.lua`.
+*   **Zoxide Smart Directory Jumper**: Installed `zoxide` and initialized it in both `.bashrc` and `.zshrc` for faster directory navigation.
 
 ### 2026-07-19
 *   **System Update**: Completed a full system package upgrade via `pacman` (with `--overwrite` flags resolving local `npm` module conflicts).
