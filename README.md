@@ -34,6 +34,7 @@ For instructions on committing modifications, pushing updates to GitHub, and man
 
 ### 2026-07-20
 *   **Path Correction**: Fixed the environment path installation for the `agy` CLI in `.bashrc` and `.zshrc` to point to `/home/philippehenin/.local/bin` instead of the incorrect `/home/phe/.local/bin`.
+*   **GPU Monitoring**: Rewrote the Waybar GPU monitoring script (`gpu.sh`) to support AMD Radeon Vega (Renoir) integrated graphics instead of the old Intel/Nvidia template.
 
 ### 2026-07-19
 *   **System Update**: Completed a full system package upgrade via `pacman` (with `--overwrite` flags resolving local `npm` module conflicts).
