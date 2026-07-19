@@ -66,3 +66,10 @@ alias mv="mv -iv"
 alias rm="rm -iv"
 # Zoxide smart directory jumper
 eval "$(zoxide init zsh)"
+
+# History substring search keybindings (Up/Down arrow and vi keys)
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+
