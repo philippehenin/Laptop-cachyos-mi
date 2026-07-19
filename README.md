@@ -42,6 +42,7 @@ For instructions on committing modifications, pushing updates to GitHub, and man
     - Corrected Mason's invalid `dockerls` package name to `dockerfile-language-server` in `lazy.lua` and `full_tools.lua`.
     - Enabled the `plugins` folder import in `lazy.lua` so additional tools (Leap, Outline, Prettier, Eslint, Aerial) load correctly.
     - Disabled `luarocks` in lazy.nvim options, and disabled unused Perl, Ruby, and Node.js provider checks in `options.lua`.
+*   **Dynamic Configurations**: Generalised the Waybar configuration files to use shell-expanded tilde (`~`) paths instead of hardcoded absolute user home directory paths. Updated `gpu.sh` to automatically detect and query AMD, Nvidia, and Intel GPUs dynamically, keeping the repository generic and preventing breakages across different laptops.
 
 ### 2026-07-19
 *   **System Update**: Completed a full system package upgrade via `pacman` (with `--overwrite` flags resolving local `npm` module conflicts).
