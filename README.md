@@ -18,3 +18,11 @@ Run the installation script to apply configurations:
 ```bash
 ./install.sh
 ```
+
+## Updates & History
+
+### 2026-07-19
+- **System Update**: Completed a full system package upgrade via `pacman` (with `--overwrite` flags resolving local `npm` module conflicts).
+- **Bluetooth Integration**: Installed `blueman` and added support for launching `blueman-manager` directly on click from the Waybar bluetooth module.
+- **Audio Configuration**: Configured the audio output to route through the HDMI screen (`PL3493WQ`) by default.
+- **Repository Setup**: Created and configured this repository (`Laptop-cachyos-mi`) as the dedicated configuration source for this laptop (`cachyos-mi`).
